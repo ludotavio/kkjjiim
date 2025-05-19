@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>:D</title>
+</head>
+<body>
+    <h1 id="texto">voce sairia com este homem?</h1>
+    <audio id="clickSound" src="detector.mp3"></audio>
+    <image id="gasoso" src="gasosao.jpg" ></image>
+    <div id="botoes">
+        <button style="padding-left: 15px; padding-right: 15px;"  id="botao1" onclick="location.href='pataoui.html'">sim</button>
+        <button style="padding-left: 15px; padding-right: 15px;" id="botao2">nao</button>
+    </div>
+<script>
+  const clickSound = document.getElementById('clickSound');
+  clickSound.volume = 0.05;
+
+  document.getElementById('botao2').addEventListener('click', function() {
+    clickSound.play();
+  });
+</script>
+<script>
+  const botao2 = document.getElementById('botao2');
+  botao2.addEventListener('click', function() {
+    botao2.classList.add('botao2-mentira');
+    setTimeout(() => {
+      botao2.classList.remove('botao2-mentira');
+    }, 1000); 
+  });
+</script>
+</body>
+</html>
